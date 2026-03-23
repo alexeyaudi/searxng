@@ -1,6 +1,10 @@
 FROM searxng/searxng:unsustainable
 
-# Копируй settings.yml
-COPY settings.yml /app/etc/searxng/settings.yml
+# Копируй settings
+COPY settings.yml /etc/searxng/settings.yml
+
+# Права на файл
+RUN chown searx:searx /etc/searxng/settings.yml
 
 EXPOSE 8080
+CMD ["python", "-m", "searx.webapp"]
