@@ -7,3 +7,7 @@ search:
 server:
   limiter: false
   image_proxy: false
+  public_instance: false
+
+general:
+  debug: false
