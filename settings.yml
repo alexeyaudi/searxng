@@ -1,0 +1,19 @@
+# Создай файл
+cat > /app/etc/searxng/settings.yml << 'EOF'
+search:
+  formats:
+    - html
+    - json
+    - csv
+
+server:
+  limiter: false
+  image_proxy: false
+  public_instance: false
+
+general:
+  debug: false
+EOF
+
+# Проверь
+cat /app/etc/searxng/settings.yml
